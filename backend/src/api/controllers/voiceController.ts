@@ -1,4 +1,4 @@
-/** Handles audio processing logic, including ElevenLabs transcription and pact parameter extraction. */
+/** Handles audio processing logic including ElevenLabs transcription and pact parameter extraction. */
 import { Request, Response } from 'express';
 
 /** Temporary stub for voice parsing */
@@ -15,3 +15,4 @@ export const parseVoicePact = async (req: Request, res: Response) => {
   console.log("AI parsing logic is currently mocked.");
   res.status(200).json(mockPactData);
 };
+
