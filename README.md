@@ -63,6 +63,52 @@ For the hackathon MVP, the deployed Solana program supports pact creation and th
 
 ---
 
+## How It Works
+
+### 1. Create a Pact
+
+The user chooses a habit, category, duration, stake amount, and penalty destination.
+
+Example:
+
+> “Study AWS for 2 hours daily for 30 days and stake 0.5 devnet SOL.”
+
+### 2. Stake devnet SOL
+
+The user connects Phantom on Solana devnet and signs the transaction.
+
+The app calls the deployed Anchor program’s `create_pact` instruction.
+
+### 3. Get Accountability Support
+
+Pax, the AI accountability coach, gives motivational and practical guidance based on the user’s pact.
+
+Users can ask Pax for advice and use the read-aloud feature for a more personal coaching experience.
+
+### 4. Track Progress
+
+The app includes:
+
+- dashboard,
+- pact detail view,
+- check-in timeline,
+- witness view,
+- settlement view,
+- Solana Explorer proof,
+- and a judge-friendly `/try-demo` walkthrough.
+
+### 5. Settle the Pact
+
+The smart contract architecture supports witness voting and settlement logic.
+
+For the MVP:
+
+- real on-chain pact creation is implemented,
+- witness and settlement flows are shown through demo UI,
+- full end-to-end witness settlement is planned for the next version.
+
+---
+
 ## Sponsor / Track Integrations
 
 ### Solana
@@ -91,7 +137,11 @@ Smart contract instructions:
 
 ### ElevenLabs
 
-Pinky-Pact includes Pax, an AI accountability coach.
+Pinky-Pact integrates ElevenLabs through **Pax**, our AI accountability coach.
+
+Pax generates short motivational coaching messages based on the user’s habit pact, progress, and context. These messages can be read aloud using ElevenLabs text-to-speech, giving users a more personal and emotionally engaging accountability experience.
+
+The app also includes a fallback voice mode so the demo still works if API credentials are unavailable.
 
 Implemented/demoed:
 
@@ -218,6 +268,7 @@ Each persona shows a different Pinky-Pact experience using mock data.
 - ElevenLabs
 - OpenRouter
 - Vercel
+- Nitro
 
 ---
 
@@ -271,6 +322,18 @@ Then add the environment variables listed above.
 
 ---
 
+## Vercel Deployment
+
+This app uses TanStack Start and Nitro.
+Recommended Vercel settings:
+* Root Directory: `frontend`
+* Framework Preset: Other / TanStack Start
+* Build Command: `npm run build`
+* Output Directory: leave empty
+* Install Command: `npm install`
+
+---
+
 ## Current MVP Scope
 
 Implemented:
@@ -311,14 +374,37 @@ Planned:
 
 ## Why Pinky-Pact Fits Solana
 
-Pinky-Pact uses Solana for what blockchains are good at:
-* verifiable commitments,
-* escrow-like stake locking,
-* transparent pact records,
+Pinky-Pact is not just a normal habit tracker with a wallet button.
+
+The commitment itself is created on-chain.
+
+Solana provides:
 * wallet-native identity,
+* transparent pact records,
+* fast low-cost transactions
+* PDA-based account creation
 * and public proof through Explorer links.
 
-The core product is not just a normal habit tracker with a wallet button. The commitment itself is created through an on-chain program.
+This makes Pinky-Pact a social accountability app with verifiable commitment records.
+
+---
+
+## Inspiration & Acknowledgements
+
+Pinky-Pact was inspired by a habit accountability pool concept shared on Superteam by **Aditya Shetty**.
+
+The original idea explored staking tokens on personal goals, inviting friends as accountability participants, and resolving the outcome based on confirmation or consensus.
+
+Our hackathon implementation expands on that direction by adding:
+* a deployed Solana devnet Anchor program,
+* Phantom wallet integration,
+* `real create_pact` transactions,
+* Pax, an AI accountability coach,
+* ElevenLabs read-aloud coaching,
+* persona-based demo flows,
+* and a polished Vercel-deployed frontend.
+
+We will also credit the original inspiration publicly when sharing the project.
 
 ---
 
