@@ -1,0 +1,62 @@
+{
+  "address": "3UoZ5ixtrtHVPRbsJfb5a9ZPPnXmYjCjcWqDmS3Z33xv",
+  "metadata": {
+    "name": "pinky",
+    "version": "0.1.0",
+    "spec": "0.1.0",
+    "description": "Pinky habit accountability program"
+  },
+  "instructions": [
+    {
+      "name": "create_pact",
+      "discriminator": [113, 110, 211, 23, 47, 169, 102, 150],
+      "accounts": [
+        { "name": "pact", "writable": true },
+        { "name": "creator", "writable": true, "signer": true },
+        { "name": "system_program", "address": "11111111111111111111111111111111" }
+      ],
+      "args": [
+        { "name": "pact_id", "type": "u64" },
+        { "name": "habit_name", "type": "string" },
+        { "name": "category", "type": "string" },
+        { "name": "deadline", "type": "i64" },
+        { "name": "penalty_destination", "type": { "defined": { "name": "PenaltyDestination" } } },
+        { "name": "stake_lamports", "type": "u64" }
+      ]
+    }
+  ],
+  "accounts": [
+    {
+      "name": "Pact",
+      "discriminator": [85, 96, 27, 232, 111, 209, 176, 19]
+    }
+  ],
+  "types": [
+    {
+      "name": "PenaltyDestination",
+      "type": {
+        "kind": "enum",
+        "variants": [
+          { "name": "SplitWitnesses" },
+          { "name": "Donate" },
+          { "name": "Burn" },
+          { "name": "PrizePool" }
+        ]
+      }
+    },
+    {
+      "name": "Pact",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          { "name": "creator", "type": "pubkey" },
+          { "name": "pact_id", "type": "u64" },
+          { "name": "habit_name", "type": "string" },
+          { "name": "category", "type": "string" },
+          { "name": "deadline", "type": "i64" },
+          { "name": "stake_lamports", "type": "u64" }
+        ]
+      }
+    }
+  ]
+}

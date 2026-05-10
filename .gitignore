@@ -1,0 +1,28 @@
+# Dependencies
+node_modules/
+jspm_packages/
+
+# Built files (TypeScript output)
+dist/
+out/
+build/
+
+# Environment Variables (CRITICAL: Never share your API keys!)
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Debug logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Operating System files
+.DS_Store
+Thumbs.db
+
+# IDE specific files
+.vscode/
+.idea/

@@ -1,0 +1,1 @@
+/** Blockchain service to monitor on-chain pact status, verify signatures, and fetch transaction data. */
