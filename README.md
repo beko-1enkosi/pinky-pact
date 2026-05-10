@@ -10,7 +10,7 @@ Built for **Dev3Pack Global Hackathon 2026** by **Thobeka • Khatisani • Jare
 
 ## Live Links
 
-- **Live Demo:** TO DO
+- **Live Demo:** https://pinky-pact-opal.vercel.app/
 - **Demo Video:**  https://youtu.be/v0EzSmOTU9g?si=Y0fqgqvoOia7HGO
 - **GitHub Repo:** https://github.com/beko-1enkosi/pinky-pact
 
@@ -160,27 +160,46 @@ Each persona shows a different Pinky-Pact experience using mock data.
 
 ## Screenshots
 
-Add screenshots in `public/screenshots/` and reference them here:
 
 ### Home
 
-![Pinky-Pact Home](public/screenshots/home.png)
+![Pinky-Pact Home](public/screenshots/image-1.png)
+
+![Pinky-Pact Home](public/screenshots/image-2.png)
+
+![Pinky-Pact Home](public/screenshots/image-3.png)
+
+![Pinky-Pact Home](public/screenshots/image-4.png)
+
+![Pinky-Pact Home](public/screenshots/image-5.png)
 
 ### Try Demo
 
-![Pinky-Pact Try Demo](public/screenshots/try-demo.png)
+![Pinky-Pact Try Demo](public/screenshots/image-6.png)
+
+![Pinky-Pact Try Demo](public/screenshots/image-7.png)
 
 ### Dashboard
 
-![Pinky-Pact Dashboard](public/screenshots/dashboard.png)
+![Pinky-Pact Dashboard](public/screenshots/image-8.png)
+
+![Pinky-Pact Dashboard](public/screenshots/image-9.png)
 
 ### Create Pact
 
-![Pinky-Pact Create Pact](public/screenshots/create-pact.png)
+![Pinky-Pact Create Pact](public/screenshots/image-10.png)
+
+![Pinky-Pact Create Pact](public/screenshots/image-11.png)
+
+![Pinky-Pact Create Pact](public/screenshots/image-12.png)
+
+![Pinky-Pact Create Pact](public/screenshots/image-13.png)
 
 ### Pact Advisor
 
-![Pinky-Pact Pax Advisor](public/screenshots/pax-advisor.png)
+![Pinky-Pact Pax Advisor](public/screenshots/image-15.png)
+
+![Pinky-Pact Pax Advisort](public/screenshots/image-16.png)
 
 ---
 
@@ -225,7 +244,7 @@ Do not commit real API keys.
 ## Local Setup
 
 ```bash
-git clone TODO_ADD_REPO_URL
+git clone git clone git@github.com:beko-1enkosi/pinky-pact.git
 cd pinky/frontend
 npm install
 cp .env.example .env
