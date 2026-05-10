@@ -10,7 +10,7 @@ Built for **Dev3Pack Global Hackathon 2026** by **Thobeka • Khatisani • Jare
 
 ## Live Links
 
-- **Live Demo:** https://pinky-pact-opal.vercel.app/
+- **Live Demo:** https://pinky-pact-opal.vercel.app **if it fails please try:** https://pinky-promise-vault.lovable.app
 - **Demo Video:**  https://youtu.be/v0EzSmOTU9g?si=Y0fqgqvoOia7HGO
 - **GitHub Repo:** https://github.com/beko-1enkosi/pinky-pact
 
